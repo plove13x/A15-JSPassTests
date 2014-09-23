@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>A15 JSPassTests</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+<p>
+    // Don't edit this section. Instead make these tests pass by writing 
+// constructors in the constructor section above ;D
+</p>
+<p>
+it("should make Sadie happy when Mason pets her", function(){
+  expect(sadie.status).toBe('normal');
+  mason.pet(sadie);
+  expect(sadie.status).toBe('happy');
+});
+</p>
+<p>
+it("should make Sadie black", function(){
+  expect(sadie.color).toBe('black');
+});
+</p>
+<p>
+it("should be make Moonshine hungry and Sadie not hungry", function(){
+  expect(moonshine.hungry).toBe(true);
+  expect(sadie.hungry).toBe(false);
+});
+</p>
+<p>
+it("should make Moonshine no longer hungry when you feed him", function(){
+  julia.feed(moonshine);
+  expect(moonshine.hungry).toBe(false);
+});
+</p>
+<p>
+it("should not affect Atticus and Moonshine's owner properties when setting Mason as Sadie's owner ", function(){
+  sadie.owner = mason;
+  expect(moonshine.owner).toBe(undefined);
+  expect(atticus.owner).toBe(undefined);
+});
+</p>
+<p>
+it("should make Julia cool and Mason not cool", function(){
+  sadie.owner = mason;
+  expect(julia.cool).toBe(true);
+  expect(mason.cool).toBe(false);
+});
+</p>
+<h2>Now you may look at the console...</h2>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

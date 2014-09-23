@@ -1,0 +1,9 @@
+{
+  "name": "a15-jspass3tests",
+  "private": true,
+  "dependencies": {
+    "chai": "~1.8.0",
+    "mocha": "~1.14.0"
+  },
+  "devDependencies": {}
+}
